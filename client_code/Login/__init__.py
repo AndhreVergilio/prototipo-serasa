@@ -13,7 +13,7 @@ class Login(LoginTemplate):
     anvil.users.login_with_form()
     print(f"Um usuario logou: {anvil.users.get_user()['email']}")
     for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
-        self.querry_feedbacks.text = row['Feedback']
+        self.querry_feedbacks.text = row ['Usuario'] +': '+ row['Feedback']
     # Any code you write here will run before the form opens.
 
   
