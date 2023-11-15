@@ -11,10 +11,12 @@ class Login(LoginTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     anvil.users.login_with_form()
-    print(f"This user has logged in: {anvil.users.get_user()['email']}")
-    alert('Logou como: '+anvil.users.get_user()['email'])
+    print(f"Um usuario logou: {anvil.users.get_user()['email']}")
+    for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
+        self.querry_feedbacks.text = row['Feedback']
     # Any code you write here will run before the form opens.
 
+  
   def label_1_show(self, **event_args):
     """This method is called when the Label is shown on the screen"""
     self.label_1.text = ('logado como: ' + anvil.users.get_user()['email'])
@@ -23,14 +25,14 @@ class Login(LoginTemplate):
     """This method is called when the button is clicked"""
     anvil.users.logout()
     alert('Deslogou')
-    anvil.users.login_with_form()
+    open_form('Login')
 
   def PUBLICAR_click(self, **event_args):
     """This method is called when the button is clicked"""
     app_tables.feedbacks.add_row(Usuario = anvil.users.get_user()['email'],
                           Feedback = self.FEEDBACK.text)
-    
-    
-    
-    
+    open_form('Login')
 
+  def querry_feedbacks_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    pass

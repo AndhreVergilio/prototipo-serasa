@@ -52,7 +52,7 @@ db_schema:
       type: string
     title: Users
   feedbacks:
-    client: none
+    client: full
     server: full
     columns:
     - name: Usuario
