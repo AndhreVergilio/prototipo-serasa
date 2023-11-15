@@ -7,7 +7,26 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: label_1
+    properties: {align: center, underline: true}
+    type: Label
+    layout_properties: {grid_position: 'NTDEGL,BRIUWC'}
+    event_bindings: {show: label_1_show}
+  - name: button_1
+    properties: {text: DESLOGAR, bold: true}
+    type: Button
+    layout_properties: {grid_position: 'NTDEGL,TZKSBV'}
+    event_bindings: {click: button_1_click}
+  - name: FEEDBACK
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'AVUAHR,HURZGL'}
+  - name: PUBLICAR
+    properties: {text: PUBLICAR}
+    type: Button
+    layout_properties: {grid_position: 'INLGLI,BBIBRP'}
+    event_bindings: {click: PUBLICAR_click}
 - type: FlowPanel
   properties: {}
   name: navbar_links

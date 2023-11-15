@@ -9,9 +9,9 @@ services:
     enable_automatically: true, confirm_email: true, require_mfa: true, remember_me_days: 7}
   server_config: {user_table: users}
 startup: {type: form, module: Login}
-package_name: M3_App_2
+package_name: Prototipo_Serasa
 allow_embedding: false
-name: M3 App 2
+name: Prototipo Serasa
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
 startup_form: null
@@ -51,4 +51,15 @@ db_schema:
       admin_ui: {width: 200}
       type: string
     title: Users
+  feedbacks:
+    client: none
+    server: full
+    columns:
+    - name: Usuario
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Feedback
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: Feedbacks
 renamed: true
