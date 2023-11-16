@@ -61,5 +61,8 @@ db_schema:
     - name: Feedback
       admin_ui: {width: 200, order: 2}
       type: string
+    - name: Data
+      admin_ui: {width: 200, order: 3}
+      type: string
     title: Feedbacks
 renamed: true

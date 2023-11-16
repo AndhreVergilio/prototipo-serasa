@@ -5,6 +5,7 @@ import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import date
 
 class Login(LoginTemplate):
   def __init__(self, **properties):
@@ -13,7 +14,7 @@ class Login(LoginTemplate):
     anvil.users.login_with_form()
     print(f"Um usuario logou: {anvil.users.get_user()['email']}")
     for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
-        self.querry_feedbacks.text = row ['Usuario'] +': '+ row['Feedback']
+        self.querry_feedbacks.text ='Dia: ' + row ['Data'] + ' ' + row ['Usuario'] +': '+ row['Feedback']
     # Any code you write here will run before the form opens.
 
   
@@ -30,7 +31,8 @@ class Login(LoginTemplate):
   def PUBLICAR_click(self, **event_args):
     """This method is called when the button is clicked"""
     app_tables.feedbacks.add_row(Usuario = anvil.users.get_user()['email'],
-                          Feedback = self.FEEDBACK.text)
+                          Feedback = self.FEEDBACK.text,
+                          Data = date.today().__str__())
     open_form('Login')
 
   def querry_feedbacks_show(self, **event_args):
