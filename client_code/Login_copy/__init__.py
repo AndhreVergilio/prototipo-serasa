@@ -1,4 +1,4 @@
-from ._anvil_designer import LoginTemplate
+from ._anvil_designer import Login_copyTemplate
 from anvil import *
 import anvil.users
 import anvil.server
@@ -7,17 +7,17 @@ import anvil.tables.query as q
 from anvil.tables import app_tables
 from datetime import date
 
-class Login(LoginTemplate):
+class Login_copy(Login_copyTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     anvil.users.login_with_form()
     print(f"Um usuario logou: {anvil.users.get_user()['email']}")
     for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
-        self.querry_feedbacks.text ='Dia: ' + row ['Data'] + ' ' + row ['Usuario'] +': '+ row['Feedback']
+      self.querry_feedbacks.text ='Dia: ' + row ['Data'] + ' ' + row ['Usuario'] +': '+ row['Feedback']
     # Any code you write here will run before the form opens.
 
-  
+
   def label_1_show(self, **event_args):
     """This method is called when the Label is shown on the screen"""
     self.label_1.text = ('logado como: ' + anvil.users.get_user()['email'])
