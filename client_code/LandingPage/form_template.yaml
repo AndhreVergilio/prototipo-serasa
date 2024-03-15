@@ -28,8 +28,8 @@ container:
       \      }\n      }\n    </style>\n</head>\n\n<body>\n    <!-- Conte\xfado da\
       \ p\xe1gina -->\n    <h1 class=\"padr\xe3o\">Desafio serasa</h1>\n    <p class=\"\
       paragrafo\">Sistema de feedback de usuarios.</p1>\n    <div class=quadrado>\
-      \ </div> \n    <button class=\"bot\xe3o_de_login\">login<button\\>\n      \n\
-      </body>\n</html>"}
+      \ </div> \n  <a href='google.com'>\n    <button class=\"bot\xe3o_de_login\"\
+      >login</button>\n  </a>\n      \n</body>\n</html>"}
   data_bindings: []
   event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
 components: []
