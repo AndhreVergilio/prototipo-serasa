@@ -12,3 +12,6 @@ class LandingPage(LandingPageTemplate):
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
+
+def click_login_button(self):
+  pass
