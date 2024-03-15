@@ -1,13 +1,16 @@
-is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
-components:
-- type: ColumnPanel
-  properties: {}
-  name: content_panel
-  layout_properties: {slot: default}
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
+  properties: {html: "<!DOCTYPE html>\n<html lang=\"pt-br\">\n<head>\n    <meta charset=\"\
+      UTF-8\">\n    <title>Desafio serasa parte 3</title>\n    <style>\n        /*\
+      \ Estilo para a borda */\n        body {\n            margin: 10px; /* Espa\xe7\
+      amento de 10px */\n            padding: 0;\n            border: 3px solid red;\
+      \ /* Cor da borda vermelha */\n            background-color: white; /* Fundo\
+      \ branco */\n           text-align: center;\n        }\n        /* Classe para\
+      \ par\xe1grafos e cabe\xe7alhos */\n        .padr\xe3o {\n            color:\
+      \ black; /* Texto na cor preta */\n            align-content: center;\n    \
+      \    }\n    </style>\n</head>\n<body>\n    <!-- Conte\xfado da p\xe1gina -->\n\
+      \    <h1 class=\"padr\xe3o\">Minha P\xe1gina com Borda Vermelha</h1>\n    <p\
+      \ class=\"padr\xe3o\">Esta \xe9 uma p\xe1gina com uma borda vermelha ao redor\
+      \ e fundo branco.</p>\n</body>\n</html>"}
+components: []
+is_package: true
