@@ -20,16 +20,16 @@ container:
       \        .quadrado{\n          margin: 9px;\n          position: absolute;\n\
       \          width: 94VW;\n          height: 0.3rem;\n          background-color:\
       \ #853051;\n          \n        }\n      .bot\xe3o_de_login{\n        background-color:\
-      \ #BD6D86;\n        position: absolute;\n        right: 50px;\n        top:\
-      \ 40px;\n        width: 6rem;\n        height: 2.5rem;\n      }\n      .divisor{\n\
-      \        position: absolute;\n        height:20;\n        width:20;\n      \
-      \  background-color: #BD6D86\n      .paragrafo{\n        color: black;\n   \
-      \     font-family: Arial, Helvetica, sans-serif;\n        font-size: 20rem;\n\
+      \ #BD6D86;\n        position: absolute;\n        right: 5vw;\n        top: 4vh;\n\
+      \        width: 6rem;\n        height: 2.5rem;\n      }\n      .divisor{\n \
+      \       position: absolute;\n        height:20;\n        width:20;\n       \
+      \ background-color: #BD6D86\n      .paragrafo{\n        color: black;\n    \
+      \    font-family: Arial, Helvetica, sans-serif;\n        font-size: 20rem;\n\
       \      }\n      }\n    </style>\n</head>\n\n<body>\n    <!-- Conte\xfado da\
       \ p\xe1gina -->\n    <h1 class=\"padr\xe3o\">Desafio serasa</h1>\n    <p class=\"\
       paragrafo\">Sistema de feedback de usuarios.</p1>\n    <div class=quadrado>\
-      \ </div> \n  <a href='google.com'>\n    <button class=\"bot\xe3o_de_login\"\
-      >login</button>\n  </a>\n      \n</body>\n</html>"}
+      \ </div> \n  <a href='https://www.google.com'>\n    <button class=\"bot\xe3\
+      o_de_login\">login</button>\n  </a>\n      \n</body>\n</html>"}
   data_bindings: []
   event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
 components: []
