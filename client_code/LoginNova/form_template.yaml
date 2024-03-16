@@ -1,0 +1,71 @@
+container:
+  type: HtmlTemplate
+  properties: {tooltip: '', background: '', foreground: '', border: '', visible: true,
+    role: null, html: "<!DOCTYPE html>\n<html lang=\"pt-br\">\n<head>\n    <meta charset=\"\
+      UTF-8\" name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\
+      >\n    <title>Desafio serasa parte 3</title>\n    <style>\n        /* Estilo\
+      \ para a borda */\n        body {\n            margin: 15px; /* Espa\xe7amento\
+      \ de 10px */\n            padding: 0;\n            border: 3px solid #D50645;\
+      \ /* Cor da borda vermelha */\n            background-color: white; /* Fundo\
+      \ branco */\n            text-align: left;\n        }\n        /* Classe para\
+      \ par\xe1grafos e cabe\xe7alhos */\n        .padr\xe3o {\n            color:\
+      \ #BD6D86; /* Texto na cor preta */\n            align-content: center;\n  \
+      \          font-family: Arial, Helvetica, sans-serif;\n        }\n         .triangulo1{\n\
+      \             position: absolute;\n             bottom: 170px;\n           \
+      \  right: 13px;\n             width: 0px;\n             height: 0px;\n     \
+      \        border-left: 20px solid transparent;\n             border-right: 80px\
+      \ solid transparent;\n             border-top: 0px solid transparent;\n    \
+      \         border-bottom: 90px solid #BD6D86; /* Vermelho */\n             transform:\
+      \ rotate(-90deg);\n              background-color: transparent\n       }\n\n\
+      \        .quadrado{\n          margin: 9px;\n          position: absolute;\n\
+      \          top: 23VH;\n          width: 94VW;\n          height: 0.3rem;\n \
+      \         background-color: #853051;\n          \n        }\n      .bot\xe3\
+      o_de_login{\n        background-color: #BD6D86;\n        position: absolute;\n\
+      \        right: 5vw;\n        top: 8vh;\n        width: 6rem;\n        height:\
+      \ 2.5rem;\n      }\n      .divisor{\n          margin: 9px;\n          position:\
+      \ absolute;\n          top: 59VH;\n          width: 94VW;\n          height:\
+      \ 0.3rem;\n          background-color: #853051;\n      }\n      .paragrafo{\n\
+      \        color: black;\n        font-family: Arial, Helvetica, sans-serif;\n\
+      \        font-size: 2rem;\n      }\n      .novocontainer{\n       position:\
+      \ absolute;\n        height:20vh;\n        width:20vw;\n        margin: 15px;\n\
+      \      }\n    </style>\n</head>\n\n<body>\n    <!-- Conte\xfado da p\xe1gina\
+      \ -->\n    <div anvil-slot=\"default\"> \n      <h1 class=\"padr\xe3o\">Desafio\
+      \ serasa</h1>\n    </div>\n<!--     <p class=\"paragrafo\">Sistema de feedback\
+      \ de usuarios.</p1> -->\n    <div class=quadrado> </div> \n    <div class=divisor>\
+      \ </div>\n<!--   <div anvil-name='bot\xe3o_de_login'>\n    <button class=\"\
+      bot\xe3o_de_login\">login</button>\n  </div> -->\n  \n      \n</body>\n</html>"}
+  data_bindings: []
+  event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
+components:
+- name: xy_panel_1
+  properties: {height: 525}
+  type: XYPanel
+  layout_properties: {slot: default}
+  components:
+  - name: label_1
+    properties: {bold: true, text: 'Sistema de feedback de usuários ', font: '', font_size: 25}
+    type: Label
+    layout_properties: {x: 7, y: 8, width: 444}
+  - name: text_area_1
+    properties: {height: 163}
+    type: TextArea
+    layout_properties: {x: 14, y: 79.40625, width: 1469}
+  - name: button_1
+    properties: {text: Deslogar}
+    type: Button
+    layout_properties: {x: 1283, y: 17, width: 200}
+    event_bindings: {click: button_1_click}
+  - name: Publicar
+    properties: {text: Publicar}
+    type: Button
+    layout_properties: {x: 1284, y: 243.40625, width: 217}
+  - name: label_2
+    properties: {text: Seu feedback anterior, font_size: 25, bold: true}
+    type: Label
+    layout_properties: {x: 17, y: 319.40625, width: 304}
+  - name: querry_feedbacks
+    properties: {text: Feedbacks anteriores}
+    type: Label
+    layout_properties: {x: 23, y: 379, width: 1460}
+    event_bindings: {show: querry_feedbacks_show}
+is_package: true

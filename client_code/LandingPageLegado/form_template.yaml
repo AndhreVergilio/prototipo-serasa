@@ -29,8 +29,7 @@ container:
       \ -->\n    <h1 class=\"padr\xe3o\">Desafio serasa</h1>\n    <p class=\"paragrafo\"\
       >Sistema de feedback de usuarios.</p1>\n    <div class=quadrado> </div> \n \
       \ <div anvil-name='bot\xe3o_de_login'>\n    <button class=\"bot\xe3o_de_login\"\
-      >login</button>\n  </div>\n  \n  <div anvil-slot-repeat=\"default\" \n    style=\"\
-      border: 2px solid pink\">\n  </div>\n      \n</body>\n</html>"}
+      >login</button>\n  </div>\n      \n</body>\n</html>"}
   data_bindings: []
   event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
 components: []
