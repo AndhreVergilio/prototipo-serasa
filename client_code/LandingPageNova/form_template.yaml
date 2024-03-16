@@ -46,6 +46,6 @@ components:
   - name: button_1
     properties: {text: Login}
     type: Button
-    layout_properties: {x: 1378, y: 10, width: 117}
+    layout_properties: {x: 916, y: 7, width: 117}
     event_bindings: {click: button_1_click}
 is_package: true

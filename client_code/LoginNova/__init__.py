@@ -13,9 +13,15 @@ class LoginNova(LoginNovaTemplate):
     self.init_components(**properties)
     anvil.users.login_with_form()
     print(f"Um usuario logou: {anvil.users.get_user()['email']}")
+
+    #definições do botão
     self.button_1.icon = "fa:user"
     self.button_1.align = "right"
     self.button_1.spacing_below = None
+    
+    #definições da caixa de texto
+    # self.FEEDBACK.background = '#FFFFFF'
+    
     for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
       self.querry_feedbacks.text ='Dia: ' + row ['Data'] + ' ' + row ['Usuario'] +': '+ row['Feedback']
     # Any code you write here will run before the form opens.

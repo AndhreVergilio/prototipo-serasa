@@ -6,7 +6,7 @@ container:
       >\n    <title>Desafio serasa parte 3</title>\n    <style>\n        /* Estilo\
       \ para a borda */\n        body {\n            margin: 15px; /* Espa\xe7amento\
       \ de 10px */\n            padding: 0;\n            border: 3px solid #D50645;\
-      \ /* Cor da borda vermelha */\n            background-color: white; /* Fundo\
+      \ /* Cor da borda vermelha */\n            background-color: lightgray; /* Fundo\
       \ branco */\n            text-align: left;\n        }\n        /* Classe para\
       \ par\xe1grafos e cabe\xe7alhos */\n        .padr\xe3o {\n            color:\
       \ #BD6D86; /* Texto na cor preta */\n            align-content: center;\n  \
@@ -62,11 +62,11 @@ components:
   - name: Publicar
     properties: {text: Publicar}
     type: Button
-    layout_properties: {x: 625, y: 258.40625, width: 217}
+    layout_properties: {x: 801, y: 264.40625, width: 217}
     event_bindings: {click: Publicar_click}
   - name: button_1
     properties: {text: Deslogar}
     type: Button
-    layout_properties: {x: 642, y: 3, width: 200}
+    layout_properties: {x: 818, y: 36, width: 200}
     event_bindings: {click: button_1_click}
 is_package: true
