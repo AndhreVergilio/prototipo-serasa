@@ -18,22 +18,22 @@ container:
       \         border-bottom: 90px solid #BD6D86; /* Vermelho */\n             transform:\
       \ rotate(-90deg);\n              background-color: transparent\n       }\n\n\
       \        .quadrado{\n          margin: 9px;\n          position: absolute;\n\
-      \          top: 23VH;\n          width: 94VW;\n          height: 0.3rem;\n \
-      \         background-color: #853051;\n          \n        }\n      .bot\xe3\
-      o_de_login{\n        background-color: #BD6D86;\n        position: absolute;\n\
-      \        right: 5vw;\n        top: 8vh;\n        width: 6rem;\n        height:\
-      \ 2.5rem;\n      }\n      .divisor{\n          margin: 9px;\n          position:\
-      \ absolute;\n          top: 59VH;\n          width: 94VW;\n          height:\
-      \ 0.3rem;\n          background-color: #853051;\n      }\n      .paragrafo{\n\
-      \        color: black;\n        font-family: Arial, Helvetica, sans-serif;\n\
-      \        font-size: 2rem;\n      }\n      .novocontainer{\n       position:\
-      \ absolute;\n        height:20vh;\n        width:20vw;\n        margin: 15px;\n\
-      \      }\n    </style>\n</head>\n\n<body>\n    <!-- Conte\xfado da p\xe1gina\
-      \ -->\n    <div anvil-slot=\"default\"> \n      <h1 class=\"padr\xe3o\">Desafio\
-      \ serasa</h1>\n    </div>\n<!--     <p class=\"paragrafo\">Sistema de feedback\
-      \ de usuarios.</p1> -->\n    <div class=quadrado> </div> \n    <div class=divisor>\
-      \ </div>\n<!--   <div anvil-name='bot\xe3o_de_login'>\n    <button class=\"\
-      bot\xe3o_de_login\">login</button>\n  </div> -->\n  \n      \n</body>\n</html>"}
+      \          top: 5cm;\n          width: 94VW;\n          height: 0.3rem;\n  \
+      \        background-color: #853051;\n          \n        }\n      .bot\xe3o_de_login{\n\
+      \        background-color: #BD6D86;\n        position: absolute;\n        right:\
+      \ 5vw;\n        top: 8vh;\n        width: 6rem;\n        height: 2.5rem;\n \
+      \     }\n      .divisor{\n          margin: 9px;\n          position: absolute;\n\
+      \          top: 11cm;\n          width: 94VW;\n          height: 0.3rem;\n \
+      \         background-color: #853051;\n      }\n      .paragrafo{\n        color:\
+      \ black;\n        font-family: Arial, Helvetica, sans-serif;\n        font-size:\
+      \ 2rem;\n      }\n      .novocontainer{\n       position: absolute;\n      \
+      \  height:20vh;\n        width:20vw;\n        margin: 15px;\n      }\n    </style>\n\
+      </head>\n\n<body>\n    <!-- Conte\xfado da p\xe1gina -->\n    <div anvil-slot=\"\
+      default\"> \n      <h1 class=\"padr\xe3o\">Desafio serasa</h1>\n    </div>\n\
+      <!--     <p class=\"paragrafo\">Sistema de feedback de usuarios.</p1> -->\n\
+      \    <div class=quadrado> </div> \n    <div class=divisor> </div>\n<!--   <div\
+      \ anvil-name='bot\xe3o_de_login'>\n    <button class=\"bot\xe3o_de_login\">login</button>\n\
+      \  </div> -->\n  \n      \n</body>\n</html>"}
   data_bindings: []
   event_bindings: {show: form_show, refreshing_data_bindings: form_refreshing_data_bindings}
 components:
@@ -46,19 +46,6 @@ components:
     properties: {bold: true, text: 'Sistema de feedback de usuários ', font: '', font_size: 25}
     type: Label
     layout_properties: {x: 7, y: 8, width: 444}
-  - name: text_area_1
-    properties: {height: 163}
-    type: TextArea
-    layout_properties: {x: 14, y: 79.40625, width: 1469}
-  - name: button_1
-    properties: {text: Deslogar}
-    type: Button
-    layout_properties: {x: 1283, y: 17, width: 200}
-    event_bindings: {click: button_1_click}
-  - name: Publicar
-    properties: {text: Publicar}
-    type: Button
-    layout_properties: {x: 1284, y: 243.40625, width: 217}
   - name: label_2
     properties: {text: Seu feedback anterior, font_size: 25, bold: true}
     type: Label
@@ -68,4 +55,18 @@ components:
     type: Label
     layout_properties: {x: 23, y: 379, width: 1460}
     event_bindings: {show: querry_feedbacks_show}
+  - name: FEEDBACK
+    properties: {height: 163}
+    type: TextArea
+    layout_properties: {x: 0, y: 99.40625, width: 1018}
+  - name: Publicar
+    properties: {text: Publicar}
+    type: Button
+    layout_properties: {x: 625, y: 258.40625, width: 217}
+    event_bindings: {click: Publicar_click}
+  - name: button_1
+    properties: {text: Deslogar}
+    type: Button
+    layout_properties: {x: 642, y: 3, width: 200}
+    event_bindings: {click: button_1_click}
 is_package: true

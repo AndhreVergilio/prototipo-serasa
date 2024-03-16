@@ -1,10 +1,11 @@
 from ._anvil_designer import LoginNovaTemplate
 from anvil import *
-import anvil.server
 import anvil.users
+import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import date
 
 class LoginNova(LoginNovaTemplate):
   def __init__(self, **properties):
@@ -24,9 +25,9 @@ class LoginNova(LoginNovaTemplate):
     anvil.users.logout()
     open_form('LandingPageNova')
 
-  def PUBLICAR_click(self, **event_args):
+  def Publicar_click(self, **event_args):
     """This method is called when the button is clicked"""
     app_tables.feedbacks.add_row(Usuario = anvil.users.get_user()['email'],
                           Feedback = self.FEEDBACK.text,
                           Data = date.today().__str__())
-    open_form('Login')
+    open_form('LoginNova')
