@@ -10,8 +10,12 @@ class LandingPageNova(LandingPageNovaTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
+
+    
     self.button_1.icon = "fa:user"
     self.button_1.align = "right"
+    self.button_1.background = "#D50645"
+    self.button_1.foreground = "White"
     self.button_1.spacing_below = None
 
     # Any code you write here will run before the form opens.

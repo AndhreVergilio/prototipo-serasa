@@ -17,10 +17,17 @@ class LoginNova(LoginNovaTemplate):
     #definições do botão
     self.button_1.icon = "fa:user"
     self.button_1.align = "right"
+    self.button_1.background = "#D50645"
+    self.button_1.foreground = "White"
     self.button_1.spacing_below = None
     
     #definições da caixa de texto
-    # self.FEEDBACK.background = '#FFFFFF'
+    self.FEEDBACK.background = 'White'
+    self.FEEDBACK.auto_expand = True
+
+    #definições dos botões
+    self.Publicar.background = "Grey"
+    self.Publicar.foreground = "White"
     
     for row in app_tables.feedbacks.search(Usuario=anvil.users.get_user()['email']):
       self.querry_feedbacks.text ='Dia: ' + row ['Data'] + ' ' + row ['Usuario'] +': '+ row['Feedback']
@@ -37,3 +44,7 @@ class LoginNova(LoginNovaTemplate):
                           Feedback = self.FEEDBACK.text,
                           Data = date.today().__str__())
     open_form('LoginNova')
+
+  def label_3_show(self, **event_args):
+    """This method is called when the Label is shown on the screen"""
+    self.label_3.text = ('logado como: ' + anvil.users.get_user()['email'])
