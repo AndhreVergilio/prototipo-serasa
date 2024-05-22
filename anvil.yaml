@@ -6,7 +6,8 @@ services:
 - source: /runtime/services/anvil/users.yml
   client_config: {mfa_timeout_days: 0, require_secure_passwords: true, use_token: true,
     allow_mfa_email_reset: true, use_email: true, allow_remember_me: false, allow_signup: true,
-    enable_automatically: true, confirm_email: true, require_mfa: true, remember_me_days: 7}
+    enable_automatically: true, confirm_email: true, require_mfa: true, remember_me_days: 7,
+    use_facebook: false}
   server_config: {user_table: users}
 startup: {type: form, module: LandingPageNova}
 package_name: Prototipo_Serasa
